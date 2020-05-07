@@ -22,7 +22,13 @@ namespace demo.test
             {
                 var number = random.Next(0,1);
                 Assert.AreEqual(0, number);
+                if(number == 0)
+                {
+                    return;
+                }
             }
+
+            Assert.Fail();
         }
     }
 }
